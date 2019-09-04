@@ -3,8 +3,14 @@
 <form>
   <div>
     <label>Marca</label>
+    <div></div>
     <select>
       <option *ngFor="let item of marcas">{{item}}</option>
     </select>
   </div>
+  <div>
+    <label>Modelo</label>
+    <div></div>
+      <input type="text" required>
+    </div>
 </form>
