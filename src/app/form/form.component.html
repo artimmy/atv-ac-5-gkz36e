@@ -2,15 +2,15 @@
 
 <form>
   <div>
-    <label>Marca</label>
+    <label for="sMarca">Marca</label>
     <div></div>
     <select>
-      <option *ngFor="let item of marcas">{{item}}</option>
+      <option *ngFor="let item of marcas" name="sMarca">{{item}}</option>
     </select>
   </div>
   <div>
     <label>Modelo</label>
     <div></div>
-      <input type="text" required>
+      <input [(ngModel)]="veiculo.modelo" name="modelo" required>
     </div>
 </form>
