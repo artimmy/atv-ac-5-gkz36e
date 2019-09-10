@@ -4,13 +4,18 @@
   <div>
     <label for="sMarca">Marca</label>
     <div></div>
-    <select>
+
+    <select class="custom-select">
+      <option selected>Selecione a Marca</option>
       <option *ngFor="let item of marcas" name="sMarca">{{item}}</option>
     </select>
+
   </div>
   <div>
+    
     <label>Modelo</label>
     <div></div>
       <input [(ngModel)]="veiculo.modelo" name="modelo" required>
+
     </div>
 </form>
