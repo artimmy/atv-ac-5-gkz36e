@@ -5,6 +5,7 @@ import { Veiculo } from './veiculo';
 export class ServicoService {
   public lista: Veiculo[] = [];
   constructor() { }
+  
   add(veiculo: Veiculo): void {
     let aux: Veiculo = {
       marca: veiculo.marca,
