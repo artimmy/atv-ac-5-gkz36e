@@ -19,6 +19,7 @@ export class ServicoService
       valor: veiculo.valor
     };
     this.lista.push(veiculo);
+    
   }
 
 }
