@@ -10,7 +10,12 @@
     </thead>
 
     <tbody>
-      
+      <div *ngIf="s.lista.length == 0">
+        <tr>
+          Lista vazia
+        </tr>
+      </div>
+
     </tbody>
 
   </table>
