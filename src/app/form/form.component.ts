@@ -7,20 +7,28 @@ import { Veiculo } from '../veiculo';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit 
+{
   private marcas: string[] = ['Fiat', 'Ford', 'GM', 'Volkswagen'];
   private veiculo: Veiculo;
-  constructor(private servico: ServicoService) { }
+  constructor(private servico: ServicoService) 
+  { 
+
+  }
   
-  ngOnInit() {
+  ngOnInit() 
+  {
     this.reset();
   }
-  salvar(): void {
+  salvar(): void 
+  {
     this.servico.add(this.veiculo);
     this.reset();
   }
-  reset(): void {
-    this.veiculo = {
+  reset(): void 
+  {
+    this.veiculo = 
+    {
       marca: undefined,
       modelo: undefined,
       valor: undefined
