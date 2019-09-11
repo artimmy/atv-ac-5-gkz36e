@@ -1,7 +1,7 @@
 <h4>Cadastro de Veículos</h4>
 
 <form (ngSubmit)="salvar()" #f="ngForm">
-  <div>
+  <div style="margin-top: 10px;">
     <label for="sMarca">Marca</label>
 
     <select class="custom-select" required>
@@ -10,7 +10,7 @@
     </select>
 
   </div>
-  <div>
+  <div style="margin-top: 10px;">
     
     <label for="modelo">Modelo</label>
     <input [(ngModel)]="veiculo.modelo" name="modelo" class="form-control" required>
@@ -18,7 +18,7 @@
   </div>
 
 
-  <div>
+  <div style="margin-top: 10px;">
 
     <label for="valor">Valor</label>
     <input type="number" min="0.00" max="20000.00" step="100.01" [(ngModel)]="veiculo.valor" name="valor" class="form-control" style="text-align:right;" required>
