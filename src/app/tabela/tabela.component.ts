@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServicoService } from '../';
+import { ServicoService } from '../servico.service';
+import { Veiculo } from '../veiculo';
 
 @Component({
   selector: 'app-tabela',
@@ -8,7 +9,7 @@ import { ServicoService } from '../';
 })
 export class TabelaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private s:ServicoService) { }
 
   ngOnInit() 
   {
