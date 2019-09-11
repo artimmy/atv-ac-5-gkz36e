@@ -4,7 +4,7 @@
   <div>
     <label for="sMarca">Marca</label>
 
-    <select class="custom-select">
+    <select class="custom-select" required>
       <option selected>Selecione a Marca</option>
       <option *ngFor="let item of marcas" name="sMarca">{{item}}</option>
     </select>
@@ -26,12 +26,12 @@
   </div>
 
   <div>
-    <button type="button" class="btn btn-secondary" >Salvar</button>
-    <button type="button" class="btn btn-secondary">Apagar</button>
+    
+    <button type="button" class="btn btn-secondary" [disabled]="!f.form.valid" >Salvar</button>
+    <button type="reset" class="btn btn-secondary" >Limpar</button>
+    
+
   </div>
   
-
-
-
 
 </form>
