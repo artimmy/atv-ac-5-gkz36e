@@ -10,12 +10,12 @@
 		<tr *ngFor="let e of s.lista">
 			<td>{{e.marca}}</td>
 			<td>{{e.modelo}}</td>
-			<td>{{e.valor}}</td>
+			<td>{{e.valor | currency:"BRL"}}</td>
 		</tr>
 	</tbody>
   <tfoot>
     <tr>
-      <td colspan="3">Total: {{s.lista.length}}</td>
+      <td colspan="3" class="text-right">Total: {{s.lista.length}}</td>
     </tr>
   </tfoot>
 </table>
