@@ -13,18 +13,19 @@ export class FormComponent implements OnInit
   private veiculo: Veiculo;
   constructor(private servico: ServicoService) 
   { 
-
   }
   
   ngOnInit() 
   {
     this.reset();
   }
+
   salvar(): void 
   {
     this.servico.add(this.veiculo);
     this.reset();
   }
+  
   reset(): void 
   {
     this.veiculo = 

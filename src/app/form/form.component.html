@@ -4,7 +4,7 @@
 
   <div class="form-group">
     <label>Marca</label>
-    <select class="custom-select form-control" required>
+    <select class="custom-select form-control" [(ngModel)]="veiculo.marca" required>
       <option selected>Selecione a Marca</option>
       <option *ngFor="let item of marcas" name="marca">{{item}}</option>
     </select>

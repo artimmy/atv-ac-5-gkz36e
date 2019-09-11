@@ -1,29 +1,21 @@
-<div>
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Marca</th>
-        <th scope="col">Modelo</th>
-        <th scope="col">Valor</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <div *ngIf="s.lista.length == 0">
-        <tr>
-          Lista vazia
-        </tr>
-      </div>
-      <tr *ngFor="let e of s.lista">
-        <td>{{e.marca}}</td> <td>({{e.modelo}})</td> <td>({{e.valor}})</td>
-      </tr>
-      <tr>
-        
-      </tr>
-
-    </tbody>
-
-  </table>
-
-</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">Marca</th>
+			<th scope="col">Modelo</th>
+			<th scope="col">Valor</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let e of s.lista">
+			<td>{{e.marca}}</td>
+			<td>{{e.modelo}}</td>
+			<td>{{e.valor}}</td>
+		</tr>
+	</tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Total: {{s.lista.length}}</td>
+    </tr>
+  </tfoot>
+</table>
