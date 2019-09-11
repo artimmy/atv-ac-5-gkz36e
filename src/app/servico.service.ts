@@ -12,7 +12,7 @@ export class ServicoService
 
   add(veiculo: Veiculo): void 
   {
-    var qtd = 0;//???????????
+    
     let aux: Veiculo = 
     {
       marca: veiculo.marca,
@@ -20,7 +20,7 @@ export class ServicoService
       valor: veiculo.valor
     };
     this.lista.push(veiculo);
-    qtd++;//?????????????????????
+    
   }
 
 }
