@@ -9,7 +9,10 @@ import { Veiculo } from '../veiculo';
 })
 export class TabelaComponent implements OnInit {
 
-  constructor(private s:ServicoService) { }
+  constructor(private s:ServicoService) 
+  { 
+    
+  }
 
   ngOnInit() 
   {
