@@ -1,37 +1,28 @@
 <h4>Cadastro de Veículos</h4>
 
 <form (ngSubmit)="salvar()" #f="ngForm">
-  <div style="margin-top: 10px;">
-    <label for="sMarca">Marca</label>
 
-    <select class="custom-select" required>
+  <div class="form-group">
+    <label>Marca</label>
+    <select class="custom-select form-control" required>
       <option selected>Selecione a Marca</option>
-      <option *ngFor="let item of marcas" name="sMarca">{{item}}</option>
+      <option *ngFor="let item of marcas" name="marca">{{item}}</option>
     </select>
-
   </div>
-  <div style="margin-top: 10px;">
-    
-    <label for="modelo">Modelo</label>
+
+  <div class="form-group">
+    <label>Modelo</label>
     <input [(ngModel)]="veiculo.modelo" name="modelo" class="form-control" required>
-
   </div>
 
-
-  <div style="margin-top: 10px;">
-
-    <label for="valor">Valor</label>
-    <input type="number" min="0.00" max="20000.00" step="100.01" [(ngModel)]="veiculo.valor" name="valor" class="form-control" style="text-align:right;" required>
-    
+  <div class="form-group">
+    <label>Valor</label>
+    <input type="number" min="0.00" max="20000.00" step="100.01" [(ngModel)]="veiculo.valor" name="valor" class="form-control" class="form-control text-right" required>
   </div>
 
-  <div style="margin-top: 10px;">
-    
-    <button type="button" class="btn btn-secondary" [disabled]="!f.form.valid" style="margin-right: 10px; ">Salvar</button>
-    
+  <div class="form-group">
+    <button type="submit" class="btn btn-secondary mr-3" [disabled]="!f.form.valid" >Salvar</button>
     <button type="reset" class="btn btn-secondary" >Limpar</button>
-
   </div>
-
 
 </form>
